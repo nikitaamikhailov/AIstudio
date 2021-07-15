@@ -6,13 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Студия Алексея Ильенко</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="page">
@@ -47,8 +51,16 @@
                           <li class="main-info_point">Калькулятор<br>сайтов</li>
                           <li class="main-info_point">Контактная<br>информация</li>
                       </ul>
-                      <div class="main-info_slider">
-
+                      <div class="swiper-container main-info_slider">
+                        <div class="swiper-wrapper main-info_slider_wrapper">
+                            <div class="swiper-slide main-info_slider_slide">Мы создаем быстрые приложения
+                                с пользованием современных технологий. Принимаем проекты любой сложности, которые будут работать на пользу вашему бизнесу.</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 1</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 2</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 3</div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                       </div>
                   </div>
               </div>
@@ -173,7 +185,7 @@
                     <div class="contacts_mail">information@mail.ru</div>
                 </div>
             </div>
-            <div class="contacts_map"></div>
+            <iframe class="contacts_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.9936151160937!2d30.300039305615012!3d59.856013294597076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963abed219478b%3A0xd9626057d54db495!2z0JrRgNCw0YHQvdC-0L_Rg9GC0LjQu9C-0LLRgdC60LDRjyDRg9C7LiwgNjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTYyNDc!5e0!3m2!1sru!2sru!4v1626364352976!5m2!1sru!2sru"  loading="lazy"></iframe>
         </div>
     </div>
 </div>
@@ -193,7 +205,7 @@
 
 
 
-            <script src="js/script.js"></script>
+
 
 </body>
 </html>
