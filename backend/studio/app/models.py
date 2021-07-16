@@ -1,19 +1,28 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.deletion import CASCADE, SET_NULL
-
+from django.db.models.deletion import CASCADE
 # Create your models here.
+
+def user_directory_path(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    return 'form/user_{0}/{1}'.format(instance.user.id, filename)
+
+
+def case_directory_path(instance, filename):
+    return 'case/case_{0}'.format(filename)
 
 
 class Case(models.Model):
-    id = models.PositiveSmallIntegerField(primary_key=True)
-    url = models.SlugField()
-    img = models.ImageField(verbose_name='Картинка')
+    url = models.SlugField(max_length=160, unique=True)
+    img = models.ImageField("Изображение", upload_to=case_directory_path, default='default.jpg')
     name = models.CharField(max_length=20, verbose_name='Название')
 
     class Meta:
         verbose_name = 'Кейс'
         verbose_name_plural = 'Кейсы'
+
+    def __str__(self):
+        return self.name
 
 
 class Review(models.Model):
@@ -24,12 +33,6 @@ class Review(models.Model):
     class Meta:
         verbose_name = 'Отзыв'
         verbose_name_plural = 'Отзывы'
-
-
-def user_directory_path(instance, filename):
-    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
-    return 'user_{0}/{1}'.format(instance.user.id, filename)
-
 
 class FormData(models.Model):
     name = models.CharField(max_length=30, verbose_name='Имя клиента')
@@ -43,19 +46,10 @@ class FormData(models.Model):
         verbose_name_plural = 'Формы заявок'
 
 
-class Report(models.Model):
-    pass
-
-    class Meta:
-        verbose_name = 'Отчет'
-        verbose_name_plural = 'Отчеты'
-
-
 class Ready(models.Model):
     percent = models.PositiveSmallIntegerField(verbose_name='Процент готовности')
     mark = models.BooleanField(verbose_name='Галочка')
-    report = models.OneToOneField(Report, on_delete=CASCADE, verbose_name='Отчет')
-
+    report = models.FileField()
     class Meta:
         verbose_name = 'Готовность'
         verbose_name_plural = 'Готовность'
@@ -65,3 +59,6 @@ class PersReady(models.Model):
     person_id = models.ForeignKey(User, on_delete=models.PROTECT)
     ready_id = models.ForeignKey(Ready, on_delete=CASCADE)
     
+
+# class Person(models.Model):
+#     pass

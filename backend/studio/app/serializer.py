@@ -1,26 +1,28 @@
 from django.contrib.auth.models import User
-from .models import *
 from rest_framework import serializers
 
+from .models import *
 
-class CaseModelSerializer(serializers.ModelSerializer):
-    
+
+class CaseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Case
-        fields = ('id', 'name', 'url', 'img')
+        fields = "__all__"
 
 
-class CaseHyperlinkedModelSerializer(serializers.HyperlinkedModelSerializer):
-    
+class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Case
-        fields = ('id', 'name', 'url', 'img')
+        model = Review
+        fields = "__all__"
+        
 
-
-class CaseListSerializer(serializers.ListSerializer):
-
+class ReviewCreateSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Case
-        fields = ('id', 'name', 'url', 'img')
+        model = Review
+        fields = "__all__"
 
 
+class ReadySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ready
+        fields = "__all__"
