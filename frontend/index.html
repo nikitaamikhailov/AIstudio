@@ -6,13 +6,17 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>Студия Алексея Ильенко</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
 <div class="page">
@@ -24,7 +28,7 @@
             </div>
             <div class="header-rightside">
                 <div class="header-rightside_contacts"><p>+7 999 88 77 66<br>information@mail.ru</p></div>
-                <div class="header-rightside_button"><p>Личный кабинет</p></div>
+                <button  class="personal-area-button">Личный кабинет</button>
             </div>
         </header>
     </div>
@@ -47,8 +51,16 @@
                           <li class="main-info_point">Калькулятор<br>сайтов</li>
                           <li class="main-info_point">Контактная<br>информация</li>
                       </ul>
-                      <div class="main-info_slider">
-
+                      <div class="swiper-container main-info_slider">
+                        <div class="swiper-wrapper main-info_slider_wrapper">
+                            <div class="swiper-slide main-info_slider_slide">Мы создаем быстрые приложения
+                                с пользованием современных технологий. Принимаем проекты любой сложности, которые будут работать на пользу вашему бизнесу.</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 1</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 2</div>
+                            <div class="swiper-slide main-info_slider_slide">еще текст 3</div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                       </div>
                   </div>
               </div>
@@ -125,8 +137,75 @@
             </div>
         </div>
     </div>
+<div class="bg-black">
+    <div class="container">
+        <div class="personal-area">
+            <div class="personal-area_text">За процессом создания можно проследить в личном кабинете, где будет отображаться отчетность по проделанной работе</div>
+            <button class="personal-area-button">Личный кабинет</button>
+        </div>
+    </div>
+</div>
+<div class="our-cases page">
+    <div class="container">
+        <div class="our-cases_title">
+            <div class="text-our">Наши</div><div class="text-cases">кейсы</div>
+        </div>
+        <div class="our-cases_cards">
+            <button class="our-cases_card our-cases_card-1"></button>
+            <button class="our-cases_card our-cases_card-2"></button>
+            <button class="our-cases_card our-cases_card-3"></button>
+            <button class="our-cases_card our-cases_card-4"></button>
+            <button class="our-cases_card our-cases_card-5"></button>
+            <button  class="our-cases_card our-cases_card-6"><img class="img-plus" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/plussite.svg" alt=""></button>
+        </div>
+    </div>
+</div>
+<div class="reviews page">
+    <div class="container">
+        <div class="reviews_title">Отзывы</div>
+        <div class="reviews_cards"></div>
+    </div>
 
-            <script src="js/script.js"></script>
+</div>
+<div class="calc page">
+    <div class="container">
+        <div class="calc_title">Калькулятор<br>сайтов</div>
+    </div>
+</div>
+<div class="contacts page">
+    <div class="container">
+        <div class="contacts_title">Контактная<br>информация</div>
+        <div class="contacts_info">
+            <div class="contacts_text">
+                <div class="contacts_address">Санкт-Петербург, Лахтинский пр., д. 2, корп. 3
+                    197229
+                </div>
+                <div class="contacts_numnmail">
+                    <div class="contacts_num">+7 999 88 77 66</div>
+                    <div class="contacts_mail">information@mail.ru</div>
+                </div>
+            </div>
+            <iframe class="contacts_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.9936151160937!2d30.300039305615012!3d59.856013294597076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963abed219478b%3A0xd9626057d54db495!2z0JrRgNCw0YHQvdC-0L_Rg9GC0LjQu9C-0LLRgdC60LDRjyDRg9C7LiwgNjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTYyNDc!5e0!3m2!1sru!2sru!4v1626364352976!5m2!1sru!2sru"  loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+<div class="black-line"></div>
+<div class="container">
+    <footer class="footer">
+        <div class="hren1">ООО "Студия АИ"<br>ОГРН 1234567890123<br>ИНН / КПП 1234567890 /<br>1234567890
+        </div>
+        <div class="icons">
+            <img src="imgs/insta.svg" alt="">
+            <img src="imgs/whatsapp.svg" alt="">
+            <img src="imgs/telegram.svg" alt="">
+        </div>
+        <div class="hren2">р/сч. 12345678901234567890<br>Корр/субсчет 1234567890<br>БИК 123456789<br>ПАО Банк "ФК Открытие"</div>
+    </footer>
+</div>
+
+
+
+
 
 </body>
 </html>
