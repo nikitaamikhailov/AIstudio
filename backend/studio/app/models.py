@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
+from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
 
 def user_directory_path(instance, filename):
@@ -50,6 +51,7 @@ class Ready(models.Model):
     percent = models.PositiveSmallIntegerField(verbose_name='Процент готовности')
     mark = models.BooleanField(verbose_name='Галочка')
     report = models.FileField()
+
     class Meta:
         verbose_name = 'Готовность'
         verbose_name_plural = 'Готовность'
@@ -60,5 +62,13 @@ class PersReady(models.Model):
     ready_id = models.ForeignKey(Ready, on_delete=CASCADE)
     
 
-# class Person(models.Model):
-#     pass
+class Person(models.Model):
+    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="persone", verbose_name='Пользователь')
+    date_joined = models.DateTimeField(auto_now_add=True)
+    phone = PhoneNumberField()
+
+    class Meta:
+        verbose_name = 'Пользователь'
+        verbose_name_plural = 'Пользователь'
+
+
