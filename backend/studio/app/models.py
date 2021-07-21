@@ -58,13 +58,13 @@ class Ready(models.Model):
 
 
 class PersReady(models.Model):
-    person_id = models.ForeignKey(User, on_delete=models.PROTECT)
-    ready_id = models.ForeignKey(Ready, on_delete=CASCADE)
+    person_id = models.OneToOneField(User, on_delete=models.PROTECT)
+    ready_id = models.OneToOneField(Ready, on_delete=CASCADE)
     
 
 class Person(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name="persone", verbose_name='Пользователь')
-    date_joined = models.DateTimeField(auto_now_add=True)
+    user = models.OneToOneField(User,on_delete=models.CASCADE, related_name="persone", verbose_name='Пользователь')
+    date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
     phone = PhoneNumberField()
 
     class Meta:

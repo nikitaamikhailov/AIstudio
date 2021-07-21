@@ -31,7 +31,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'djoser',
-
     'phonenumber_field',
 
     'app',
@@ -124,6 +123,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+PHONENUMBER_DB_FORMAT = 'E164'
+PHONENUMBER_DEFAULT_REGION = 'RU'
 
 
 REST_FRAMEWORK = {
