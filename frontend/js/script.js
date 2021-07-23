@@ -20,4 +20,6 @@ const swiperReviews = new Swiper('.reviews_cards', {
         nextEl: '.reviews-swiper-button-next',
         prevEl: '.reviews-swiper-button-prev',
     },
+    centeredSlides: true,
+
 })
