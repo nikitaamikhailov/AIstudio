@@ -13,76 +13,88 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Студия Алексея Ильенко</title>
-    <script src="js/script.js"></script>
+
 </head>
 <body>
-<div class="page">
-    <div class="container">
-        <header class="header">
-            <div class="logo">
-                <img class="logo_img" src="imgs/logo.svg" alt="Логотип">
-                <div class="logo_text"><p>Студия<br>Алексея Ильенко</p></div>
-            </div>
-            <div class="header-rightside">
-                <div class="header-rightside_contacts"><p>+7 999 88 77 66<br>information@mail.ru</p></div>
-                <button  class="personal-area-button">Личный кабинет</button>
-            </div>
-        </header>
-    </div>
-    <div class="line"></div>
-      <div class="main">
-          <div class="container">
-              <div class="main-container">
-                      <div class="main-logo logo">
-                          <img class="main-logo_img" src="imgs/logo.svg" alt="Логотип">
-                          <div class="main-logo_text"><p>Студия<br>Алексея Ильенко</p></div>
-                      </div>
-                  <div class="main-info">
-
-                      <ul class="main-info_nav">
-                          <li class="main-info_point">Главная</li>
-                          <li class="main-info_point">Что мы можем<br>предложить</li>
-                          <li class="main-info_point">Как работаем</li>
-                          <li class="main-info_point">Наши кейсы</li>
-                          <li class="main-info_point">Отзывы</li>
-                          <li class="main-info_point">Калькулятор<br>сайтов</li>
-                          <li class="main-info_point">Контактная<br>информация</li>
-                      </ul>
-                      <div class="swiper-container main-info_slider">
-                        <div class="swiper-wrapper main-info_slider_wrapper">
-                            <div class="swiper-slide main-info_slider_slide">Мы создаем быстрые приложения
-                                с пользованием современных технологий. Принимаем проекты любой сложности, которые будут работать на пользу вашему бизнесу.</div>
-                            <div class="swiper-slide main-info_slider_slide">еще текст 1</div>
-                            <div class="swiper-slide main-info_slider_slide">еще текст 2</div>
-                            <div class="swiper-slide main-info_slider_slide">еще текст 3</div>
-                        </div>
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-    </div>
-</div>
-    <div class="offer-page-top">
+<div class="wrapper">
+    <div class="page bg-black">
         <div class="container">
-            <div class="offer-title">Что мы можем<br>предложить</div>
+            <header class="header">
+                <div class="logo">
+                    <img class="logo_img" src="imgs/logo.svg" alt="Логотип">
+                    <div class="logo_text">Студия<br>Алексея Ильенко</div>
+                </div>
+                <div class="header-rightside">
+                    <div class="header-rightside_contacts">
+                        <a
+                                class="header-rightside_contacts_text"
+                                href="tel:8999887766"
+                        >+7 999 88 77 66</a><br>
+                        <a
+                                class="header-rightside_contacts_text"
+                                href="mailto:information@mail.ru"
+                        >information@mail.ru</a></div>
+                    <button class="personal-area-button">Личный кабинет</button>
+                </div>
+            </header>
+        </div>
+
+
+        <main class="main">
+            <div class="main-left">
+                <div class="main-logo logo">
+                    <img class="main-logo_img" src="imgs/logo.svg" alt="Логотип">
+                    <div class="main-logo_text"><p>Студия<br>Алексея Ильенко</p></div>
+                </div>
+                <div class="main-left-navnslider">
+                    <ul class="main-info_nav">
+                        <li class="main-info_point">Главная</li>
+                        <li class="main-info_point">Что мы можем<br>предложить</li>
+                        <li class="main-info_point">Как работаем</li>
+                        <li class="main-info_point">Наши кейсы</li>
+                        <li class="main-info_point">Отзывы</li>
+                        <li class="main-info_point">Калькулятор<br>сайтов</li>
+                        <li class="main-info_point">Контактная<br>информация</li>
+                    </ul>
+                    <div class="slider">
+                        <div class="swiper-container main-info_slider">
+                            <div class="swiper-wrapper main-info_slider_wrapper">
+                                <div class="swiper-slide main-info_slider_slide">Мы создаем быстрые приложения
+                                    с пользованием современных технологий. Принимаем проекты любой сложности,
+                                    которые будут работать на пользу вашему бизнесу.
+                                </div>
+                                <div class="swiper-slide main-info_slider_slide">еще текст 1</div>
+                                <div class="swiper-slide main-info_slider_slide">еще текст 2</div>
+                                <div class="swiper-slide main-info_slider_slide">еще текст 3</div>
+                            </div>
+                            <div class="main-swiper-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+            </div>
+        </main>
+
+
+
+</div>
+    <div class="offer-page">
+        <div class="container fill offer-page-flex">
+            <div class="offer-page_title">Что мы можем<br>предложить</div>
+            <div class="offer-page_cards">
+                <img class="offer-page_cards_card" src="imgs/crm.svg" alt="карточка">
+                <img class="card" src="imgs/ad.svg" alt="карточка">
+                <img class="card" src="imgs/штрихкод.svg" alt="карточка">
+                <img class="card" src="imgs/сайты%20агрегаторы.svg" alt="карточка">
+            </div>
+            <div class="title-how">Как мы работаем</div>
         </div>
     </div>
-    <div class="container">
-        <div class="cards">
-            <img class="card" src="imgs/crm.svg" alt="карточка">
-            <img class="card" src="imgs/ad.svg" alt="карточка">
-            <img class="card" src="imgs/штрихкод.svg" alt="карточка">
-            <img class="card" src="imgs/сайты%20агрегаторы.svg" alt="карточка">
-        </div>
-    </div>
-    <div class="offer-page-bottom">
-            <div class="title-how">Как мы работаем(хз пока как выровнить)</div>
-    </div>
+
+
     <div class="how-work page">
         <div class="list-container">
             <div class="list">
@@ -90,7 +102,9 @@
                     <div class="list-element_number">01</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Сбор информации</div>
-                        <div class="list-element_text_description">Анализ информации о проекте, его уникальности на рынке и о целевой аудитории, составление брифа</div>
+                        <div class="list-element_text_description">Анализ информации о проекте, его уникальности на
+                            рынке и о целевой аудитории, составление брифа
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
@@ -98,7 +112,9 @@
                     <div class="list-element_number">02</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Дизайн</div>
-                        <div class="list-element_text_description">Создание макета в соответствии с фирменным стилем организации </div>
+                        <div class="list-element_text_description">Создание макета в соответствии с фирменным стилем
+                            организации
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
@@ -106,7 +122,9 @@
                     <div class="list-element_number">03</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Разработка вашего проекта</div>
-                        <div class="list-element_text_description">Верстка и написание FrontEnd и BackEnd логики проекта</div>
+                        <div class="list-element_text_description">Верстка и написание FrontEnd и BackEnd логики
+                            проекта
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
@@ -114,7 +132,9 @@
                     <div class="list-element_number">04</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Тестирование</div>
-                        <div class="list-element_text_description">Проверка всех модулей на работоспособность, устранение ошибок и багов</div>
+                        <div class="list-element_text_description">Проверка всех модулей на работоспособность,
+                            устранение ошибок и багов
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
@@ -122,7 +142,9 @@
                     <div class="list-element_number">05</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Наполнение контентом</div>
-                        <div class="list-element_text_description">Написание текстов, привлекающих читателей, и заполнение сайта интерактивными материалами</div>
+                        <div class="list-element_text_description">Написание текстов, привлекающих читателей, и
+                            заполнение сайта интерактивными материалами
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
@@ -130,82 +152,119 @@
                     <div class="list-element_number">06</div>
                     <div class="list-element_text">
                         <div class="list-element_text_title">Финальный запуск и контроль</div>
-                        <div class="list-element_text_description">Окончательный запуск проекта, поддержание работоспособности в течение первого месяца и ответы на возникающие вопросы</div>
+                        <div class="list-element_text_description">Окончательный запуск проекта, поддержание
+                            работоспособности в течение первого месяца и ответы на возникающие вопросы
+                        </div>
                         <div class="list-element_text_line"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-<div class="bg-black">
-    <div class="container">
-        <div class="personal-area">
-            <div class="personal-area_text">За процессом создания можно проследить в личном кабинете, где будет отображаться отчетность по проделанной работе</div>
-            <button class="personal-area-button">Личный кабинет</button>
-        </div>
-    </div>
-</div>
-<div class="our-cases page">
-    <div class="container">
-        <div class="our-cases_title">
-            <div class="text-our">Наши</div><div class="text-cases">кейсы</div>
-        </div>
-        <div class="our-cases_cards">
-            <button class="our-cases_card our-cases_card-1"></button>
-            <button class="our-cases_card our-cases_card-2"></button>
-            <button class="our-cases_card our-cases_card-3"></button>
-            <button class="our-cases_card our-cases_card-4"></button>
-            <button class="our-cases_card our-cases_card-5"></button>
-            <button  class="our-cases_card our-cases_card-6"><img class="img-plus" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/plussite.svg" alt=""></button>
-        </div>
-    </div>
-</div>
-<div class="reviews page">
-    <div class="container">
-        <div class="reviews_title">Отзывы</div>
-        <div class="reviews_cards"></div>
-    </div>
-
-</div>
-<div class="calc page">
-    <div class="container">
-        <div class="calc_title">Калькулятор<br>сайтов</div>
-    </div>
-</div>
-<div class="contacts page">
-    <div class="container">
-        <div class="contacts_title">Контактная<br>информация</div>
-        <div class="contacts_info">
-            <div class="contacts_text">
-                <div class="contacts_address">Санкт-Петербург, Лахтинский пр., д. 2, корп. 3
-                    197229
+    <div class="bg-black">
+        <div class="container">
+            <div class="personal-area">
+                <div class="personal-area_text">За процессом создания можно проследить в личном кабинете, где будет
+                    отображаться отчетность по проделанной работе
                 </div>
-                <div class="contacts_numnmail">
-                    <div class="contacts_num">+7 999 88 77 66</div>
-                    <div class="contacts_mail">information@mail.ru</div>
+                <button class="personal-area-button">Личный кабинет</button>
+            </div>
+        </div>
+    </div>
+    <div class="our-cases page">
+        <div class="container">
+            <div class="our-cases_title">
+                <div class="our-cases_title_text-our">Наши</div>
+                <div class="our-cases_title_text-cases">кейсы</div>
+            </div>
+            <div class="our-cases_cards">
+                <button class="our-cases_card our-cases_card-1"></button>
+                <button class="our-cases_card our-cases_card-2"></button>
+                <button class="our-cases_card our-cases_card-3"></button>
+                <button class="our-cases_card our-cases_card-4"></button>
+                <button class="our-cases_card our-cases_card-5"></button>
+                <button class="our-cases_card our-cases_card-6"><img class="our-cases_img-plus"
+                                                                     src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/plussite.svg"
+                                                                     alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="reviews page bg-black">
+        <div class="container">
+            <div class="reviews_title">Отзывы</div>
+        </div>
+        <div class="reviews_cards swiper-container">
+            <div class="swiper-wrapper reviews_swiper-wrapper">
+                <div class="swiper-slide reviews_swiper-slide">
+                    <div class="reviews_swiper-slide_title">Гугл</div>
+                    <div class="reviews_swiper-slide_text">Все заебись охуенные ребята ставлю класс</div>
+                </div>
+                <div class="swiper-slide reviews_swiper-slide">
+                    <div class="reviews_swiper-slide_title">Леди гага</div>
+                    <div class="reviews_swiper-slide_text">Я кончила сайты охуенные</div>
+                </div>
+                <div class="swiper-slide reviews_swiper-slide">
+                    <div class="reviews_swiper-slide_title">Газпром</div>
+                    <div class="reviews_swiper-slide_text">Все заебись охуенные ребята ставлю класс бла бла бла бал абл
+                        аалфарфращрфущршака
+                    </div>
+                </div>
+                <div class="swiper-slide reviews_swiper-slide">
+                    <div class="reviews_swiper-slide_title"></div>
+                    <div class="reviews_swiper-slide_text"></div>
                 </div>
             </div>
-            <iframe class="contacts_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.9936151160937!2d30.300039305615012!3d59.856013294597076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963abed219478b%3A0xd9626057d54db495!2z0JrRgNCw0YHQvdC-0L_Rg9GC0LjQu9C-0LLRgdC60LDRjyDRg9C7LiwgNjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTYyNDc!5e0!3m2!1sru!2sru!4v1626364352976!5m2!1sru!2sru"  loading="lazy"></iframe>
+            <div class="swiper-pagination reviews-swiper-pagination"></div>
+            <button class="swiper-button-next reviews-swiper-button-next"></button>
+            <button class="swiper-button-prev reviews-swiper-button-prev"></button>
+        </div>
+
+
+    </div>
+    <div class="calc page bg-black">
+        <div class="container">
+            <div class="calc_title">Калькулятор<br>сайтов</div>
         </div>
     </div>
-</div>
-<div class="black-line"></div>
-<div class="container">
-    <footer class="footer">
-        <div class="hren1">ООО "Студия АИ"<br>ОГРН 1234567890123<br>ИНН / КПП 1234567890 /<br>1234567890
+    <div class="contacts page">
+        <div class="container">
+            <div class="contacts_title">Контактная<br>информация</div>
+            <div class="contacts_info">
+                <div class="contacts_text">
+                    <div class="contacts_address">Санкт-Петербург, Лахтинский пр., д. 2, корп. 3
+                        197229
+                    </div>
+                    <div class="contacts_numnmail">
+                        <div class="contacts_num">+7 999 88 77 66</div>
+                        <div class="contacts_mail">information@mail.ru</div>
+                    </div>
+                </div>
+                <iframe class="contacts_map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.9936151160937!2d30.300039305615012!3d59.856013294597076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963abed219478b%3A0xd9626057d54db495!2z0JrRgNCw0YHQvdC-0L_Rg9GC0LjQu9C-0LLRgdC60LDRjyDRg9C7LiwgNjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTYyNDc!5e0!3m2!1sru!2sru!4v1626364352976!5m2!1sru!2sru"
+                        loading="lazy"></iframe>
+            </div>
         </div>
-        <div class="icons">
-            <img src="imgs/insta.svg" alt="">
-            <img src="imgs/whatsapp.svg" alt="">
-            <img src="imgs/telegram.svg" alt="">
-        </div>
-        <div class="hren2">р/сч. 12345678901234567890<br>Корр/субсчет 1234567890<br>БИК 123456789<br>ПАО Банк "ФК Открытие"</div>
-    </footer>
+    </div>
+    <div class="container">
+        <footer class="footer">
+            <div class="hren1">ООО "Студия АИ"<br>ОГРН 1234567890123<br>ИНН / КПП 1234567890 /<br>1234567890
+            </div>
+            <div class="icons">
+                <img src="imgs/insta.svg" alt="">
+                <img src="imgs/whatsapp.svg" alt="">
+                <img src="imgs/telegram.svg" alt="">
+            </div>
+            <div class="hren2">р/сч. 12345678901234567890<br>Корр/субсчет 1234567890<br>БИК 123456789<br>ПАО Банк "ФК
+                Открытие"
+            </div>
+        </footer>
+    </div>
+
+    <div class="offer-page-bottom-blackbox"></div>
+    <div class="our-cases-blackbox"></div>
 </div>
-
-
-
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
