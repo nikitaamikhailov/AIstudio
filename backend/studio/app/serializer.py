@@ -29,7 +29,6 @@ class ReadySerializer(serializers.ModelSerializer):
 
 
 class PersonSerializer(serializers.ModelSerializer):
-    user=serializers.StringRelatedField(read_only=True)
     class Meta:
         model=Person
         fields='__all__'
