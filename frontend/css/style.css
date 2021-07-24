@@ -2,23 +2,31 @@
   color: #fff;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .page {
   width: 100%;
   height: 100vh;
-  background-color: #101515;
+}
+
+.half-page {
+  width: 100%;
+  height: 50vh;
 }
 
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.fill {
+  height: 100%;
 }
 
 .bg-black {
@@ -32,6 +40,27 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.header-rightside_contacts_text {
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.header-rightside_contacts_text:hover {
+  text-decoration: underline;
+}
+.header-rightside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header-rightside_contacts {
+  padding: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
 }
 
 .logo {
@@ -53,61 +82,67 @@ body {
   font-family: "Cormorant Garamond", serif;
 }
 
-.header-rightside {
+.personal-area-button {
+  padding: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#3c3c3c), color-stop(#000000), to(#3c3c3c));
+  background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c);
+  border-radius: 28px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.personal-area-button:hover {
+  background-position-x: 100px;
+}
+
+.main {
+  height: 60vh;
+  border-top: 3px solid #C4C4C4;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.main-left {
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.main-left-navnslider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
-.header-rightside_contacts {
-  padding: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
-}
-
-.personal-area-button {
-  padding: 15px;
-  background: -webkit-gradient(linear, left top, right top, from(#3c3c3c), to(#000000));
-  background: linear-gradient(to right, #3c3c3c, #000000);
-  border-radius: 28px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
-}
-
-.line {
-  width: 100%;
-  height: 3px;
-  background-color: #C4C4C4;
-}
-
-.main {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/dc36d88677f72ed3d7ba71f8d5a1e48d84dac9ac/frontend/imgs/bg-notebook.svg") 100% 0% no-repeat;
-  overflow: auto;
-  height: 100%;
-}
-
-.main-container {
-  margin-top: 5vh;
-  max-width: 1100px;
-  overflow: auto;
-  height: 100%;
-  float: left;
-}
-
 .main-logo {
   margin: 0 auto;
   padding: 30px;
 }
-
 .main-logo_text {
   padding: 20px;
   font-size: 60px;
   font-family: "Cormorant Garamond", serif;
 }
-
 .main-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,14 +154,8 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  min-width: 0;
 }
-
-.img-points {
-  height: 10%;
-  -o-object-fit: fill;
-     object-fit: fill;
-}
-
 .main-info_nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -138,36 +167,60 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100%;
 }
-
 .main-info_point {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   list-style: none;
-  margin-bottom: 10%;
+  margin-bottom: 20px;
 }
-
 .main-info_slider {
-  width: 420px;
-  height: 170px;
-  border-radius: 15px;
+  width: 400px;
+  height: 150px;
+  background: radial-gradient(#c4c4c4, #000000);
+  border-radius: 40px;
+}
+.main-right {
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/dc36d88677f72ed3d7ba71f8d5a1e48d84dac9ac/frontend/imgs/bg-notebook.svg") 100% 0 no-repeat;
+  height: 100%;
+  width: 40%;
 }
 
-.offer-page-top {
-  background-color: #ffffff;
-  height: 50vh;
+.offer-page {
+  height: 100vh;
 }
-
-.offer-title {
+.offer-page-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.offer-page_title {
   font-size: 60px;
   font-family: "Cormorant Garamond", serif;
   color: #101515;
   float: left;
   margin-top: 50px;
 }
-
-.cards {
+.offer-page-bottom-blackbox {
+  width: 80%;
+  height: 50vh;
+  position: absolute;
+  top: 154vh;
+  left: 0;
+  background-color: #101515;
+  z-index: -1;
+}
+.offer-page_cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,46 +229,24 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 0;
+  margin: 0 auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
-
-.offer-page-bottom {
-  background-color: #101515;
-  height: 50vh;
-  width: 75%;
-  margin-top: -15px;
-  overflow: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.card {
+.offer-page_cards_card {
   padding: 0;
 }
 
 .title-how {
   font-size: 60px;
   font-family: "Cormorant Garamond", serif;
-  color: #ffffff;
+  color: #FFFFFF;
   padding-bottom: 10px;
 }
 
 .how-work {
   background-color: #ffffff;
-}
-
-.list-container {
-  max-width: 740px;
-  margin: 0 auto;
-  padding-top: 20px;
 }
 
 .list {
@@ -230,7 +261,11 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
+.list-container {
+  max-width: 740px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
 .list-element {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,13 +277,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-
 .list-element_number {
   font-size: 80px;
   font-family: "Cormorant Garamond", serif;
   color: #000000;
 }
-
 .list-element_text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,13 +298,11 @@ body {
           align-items: flex-start;
   max-width: 600px;
 }
-
 .list-element_text_title {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   color: #000000;
 }
-
 .list-element_text_description {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -279,7 +310,6 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-
 .list-element_text_line {
   width: 100%;
   height: 2px;
@@ -308,7 +338,6 @@ body {
 .our-cases {
   background-color: #ffffff;
 }
-
 .our-cases_title {
   background-color: #ffffff;
   display: -webkit-box;
@@ -321,21 +350,19 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-
-.text-our {
+.our-cases_title_text-our {
   color: #101515;
   padding: 20px;
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
 }
-
-.text-cases {
-  color: #101515;
+.our-cases_title_text-cases {
+  color: #FFFFFF;
   padding: 20px;
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
+  z-index: 1;
 }
-
 .our-cases_cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -349,76 +376,176 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .our-cases_card {
   width: 350px;
   height: 280px;
   background-color: #101515;
   border-radius: 20px;
   margin: 10px;
+  z-index: 1;
 }
-
 .our-cases_card-1 {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/1site.svg") 50% 50% no-repeat;
+  background-size: cover;
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/1site.svg") center;
 }
-
 .our-cases_card-2 {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/2site.svg") 50% 50% no-repeat;
+  background-size: cover;
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/2site.svg") center;
 }
-
 .our-cases_card-3 {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/3site.svg") 50% 50% no-repeat;
+  background-size: cover;
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/3site.svg") center;
 }
-
 .our-cases_card-4 {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/4site.svg") 50% 50% no-repeat;
+  background-size: cover;
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/4site.svg") center;
 }
-
 .our-cases_card-5 {
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/5site.svg") 50% 50% no-repeat;
+  background-size: cover;
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/5site.svg") center;
 }
-
 .our-cases_card-6 {
   background-color: #C4C4C4;
 }
-
-.img-plus {
+.our-cases_img-plus {
   margin: 0 auto;
+}
+.our-cases-blackbox {
+  position: absolute;
+  top: 317vh;
+  right: 0;
+  background-color: #101515;
+  width: 72%;
+  height: 50vh;
+  z-index: 0;
 }
 
 .reviews {
   background-color: #101515;
 }
-
 .reviews_title {
   color: #ffffff;
   padding: 20px;
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
 }
+.reviews-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: auto;
+}
+.reviews_cards {
+  margin: auto 0;
+  height: 500px;
+  max-width: 1100px;
+}
+.reviews_swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: linear-gradient(0.15turn, #000000, #101515, #000000);
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 80%;
+  max-width: 500px;
+}
+.reviews_swiper-slide_title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 46px;
+  height: 30%;
+  margin: 0 auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.reviews_swiper-slide_text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  height: 70%;
+  margin: auto;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 5px;
+  width: 100%;
+}
+.reviews-swiper-button-next::after, .reviews .reviews-swiper-button-prev::after {
+  display: none;
+}
+.reviews .reviews-swiper-button-next, .reviews .reviews-swiper-button-prev {
+  background-color: #101515;
+  width: 40px;
+  height: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 0;
+  position: static;
+  border-radius: 30px;
+}
+
+.swiper-slide-prev, .swiper-slide-next {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  border: 0;
+}
+.swiper-slide-prev .reviews_swiper-slide_title, .swiper-slide-next .reviews_swiper-slide_title {
+  font-size: 26px;
+}
+.swiper-slide-prev .reviews_swiper-slide_text, .swiper-slide-next .reviews_swiper-slide_text {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.swiper-slide-active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  border: 3px solid #c4c4c4;
+}
+
+.reviews-swiper-button-prev {
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/prev.svg");
+}
+
+.reviews-swiper-button-next {
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/next.svg");
+}
 
 .calc_title {
   color: #ffffff;
-  padding: 20px;
-  padding-left: 0;
+  padding: 20px 20px 20px 0;
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
 }
 
 .contacts {
   background-color: #ffffff;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 40px;
 }
-
 .contacts_title {
   color: #101515;
-  padding: 20px;
-  padding-left: 0;
+  padding: 20px 20px 20px 0;
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
   width: 100%;
   margin-bottom: 30px;
 }
-
 .contacts_info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,7 +554,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-
 .contacts_text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -441,37 +567,26 @@ body {
           flex-direction: column;
   overflow: auto;
 }
-
 .contacts_address {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   color: #000000;
 }
-
 .contacts_num {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   color: #000000;
 }
-
 .contacts_mail {
   font-family: "Montserrat", sans-serif;
   font-size: 36px;
   color: #000000;
 }
-
 .contacts_map {
   width: 70%;
   height: 446px;
   border-radius: 20px;
-  border-color: #000000;
-  border: 2px;
-}
-
-.black-line {
-  width: 100%;
-  height: 2px;
-  background-color: #000000;
+  border: 2px #000000;
 }
 
 .footer {

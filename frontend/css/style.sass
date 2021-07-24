@@ -2,23 +2,40 @@
   color: #fff
   margin: 0
   padding: 0
+  scroll-behavior: smooth
 .page
   width: 100%
   height: 100vh
-  background-color: #101515
+.half-page
+  width: 100%
+  height: 50vh
+
 body
   min-height: 100vh
-  scroll-behavior: smooth
   text-rendering: optimizeSpeed
 .container
   max-width: 1200px
   margin: 0 auto
+.fill
+  height: 100%
 .bg-black
   background-color: #101515
 
 .header
   display: flex
   justify-content: space-between
+  &-rightside_contacts_text
+    text-decoration: none
+    transition: .5s
+    &:hover
+      text-decoration: underline
+  &-rightside
+    display: flex
+    align-items: center
+  &-rightside_contacts
+    padding: 20px
+    font-family: 'Montserrat', sans-serif
+    font-size: 25px
 .logo
   display: flex
   align-items: center
@@ -28,141 +45,148 @@ body
   padding: 20px
   font-size: 32px
   font-family: 'Cormorant Garamond', serif
-.header-rightside
-  display: flex
-  align-items: center
-.header-rightside_contacts
-  padding: 20px
-  font-family: 'Montserrat', sans-serif
-  font-size: 25px
+
 .personal-area-button
   padding: 15px
-  background: linear-gradient(to right, #3c3c3c, #000000)
+  background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c)
   border-radius: 28px
   font-family: 'Montserrat', sans-serif
   font-size: 25px
-.line
-  width: 100%
-  height: 3px
-  background-color: #C4C4C4
+  border: none
+  cursor: pointer
+  transition: 0.5s
+  &:hover
+    background-position-x: 100px
+
+
 .main
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/dc36d88677f72ed3d7ba71f8d5a1e48d84dac9ac/frontend/imgs/bg-notebook.svg") 100% 0% no-repeat
-  overflow: auto
-  height: 100%
-.main-container
-  margin-top: 5vh
-  max-width: 1100px
-  overflow: auto
-  height: 100%
-  float: left
-
-.main-logo
-  margin: 0 auto
-  padding: 30px
-.main-logo_img
-
-.main-logo_text
-  padding: 20px
-  font-size: 60px
-  font-family: 'Cormorant Garamond', serif
-.main-info
+  height: 60vh
+  border-top: 3px solid #C4C4C4
+  width: 100%
   display: flex
-  align-items: center
-  justify-content: space-between
-  height: 100%
-.img-points
-  height: 10%
-  object-fit: fill
-.main-info_nav
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  height: 100%
-.main-info_point
-  font-family: 'Montserrat', sans-serif
-  font-size: 25px
-  list-style: none
-  margin-bottom: 10%
-.main-info_slider
-  width: 420px
-  height: 170px
-  border-radius: 15px
-.offer-page-top
-  background-color: #ffffff
-  height: 50vh
-.offer-title
-  font-size: 60px
-  font-family: 'Cormorant Garamond', serif
-  color: #101515
-  float: left
-  margin-top: 50px
-
-.cards
-  display: flex
-  justify-content: space-around
-  align-items: center
-  height: 0
-
-.offer-page-bottom
-  background-color: #101515
-  height: 50vh
-  width: 75%
-  margin-top: -15px
-  overflow: auto
-  display: flex
-  flex-direction: column
   justify-content: flex-end
+  align-items: flex-start
+  &-left
+    max-width: 800px
+    display: flex
+    flex-direction: column
+    height: 100%
+    &-navnslider
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &-logo
+    margin: 0 auto
+    padding: 30px
+  &-logo_text
+    padding: 20px
+    font-size: 60px
+    font-family: 'Cormorant Garamond', serif
+  &-info
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 100%
+    min-width: 0
+    &_nav
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    &_point
+      font-family: 'Montserrat', sans-serif
+      font-size: 25px
+      list-style: none
+      margin-bottom: 20px
+    &_slider
+      width: 400px
+      height: 150px
+      background: radial-gradient(#c4c4c4, #000000)
+      border-radius: 40px
+      &_wrapper
+      &_slide
+      &-pagination
 
-.card
-  padding: 0
+  &-right
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/dc36d88677f72ed3d7ba71f8d5a1e48d84dac9ac/frontend/imgs/bg-notebook.svg") 100% 0 no-repeat
+    height: 100%
+    width: 40%
+
+
+.offer-page
+  height: 100vh
+  &-flex
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    flex-direction: column
+  &_title
+    font-size: 60px
+    font-family: 'Cormorant Garamond', serif
+    color: #101515
+    float: left
+    margin-top: 50px
+  &-bottom-blackbox
+    width: 80%
+    height: 50vh
+    position: absolute
+    top: 154vh
+    left: 0
+    background-color: #101515
+    z-index: -1
+  &_cards
+    display: flex
+    justify-content: space-around
+    align-items: center
+    margin: 0 auto
+    align-self: center
+    &_card
+      padding: 0
+
+
 .title-how
   font-size: 60px
   font-family: 'Cormorant Garamond', serif
-  color: #ffffff
+  color: #FFFFFF
   padding-bottom: 10px
 .how-work
   background-color: #ffffff
-.list-container
-  max-width: 740px
-  margin: 0 auto
-  padding-top: 20px
+
 .list
   display: flex
   flex-direction: column
   justify-content: space-between
-
-.list-element
-  display: flex
-  justify-content: space-between
-  align-items: center
-.list-element_number
-  font-size: 80px
-  font-family: 'Cormorant Garamond', serif
-  color: #000000
-
-.list-element_text
-  display: flex
-  flex-direction: column
-  justify-content: space-between
-  align-items: flex-start
-  max-width: 600px
-
-.list-element_text_title
-  font-family: 'Montserrat', sans-serif
-  font-size: 36px
-  color: #000000
-
-.list-element_text_description
-  font-family: 'Montserrat', sans-serif
-  font-size: 20px
-  color: #000000
-  margin-top: 10px
-  margin-bottom: 10px
-
-.list-element_text_line
-  width: 100%
-  height: 2px
-  background-color: #000000
+  &-container
+    max-width: 740px
+    margin: 0 auto
+    padding-top: 20px
+  &-element
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-element_number
+    font-size: 80px
+    font-family: 'Cormorant Garamond', serif
+    color: #000000
+  &-element_text
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+    max-width: 600px
+  &-element_text_title
+    font-family: 'Montserrat', sans-serif
+    font-size: 36px
+    color: #000000
+  &-element_text_description
+    font-family: 'Montserrat', sans-serif
+    font-size: 20px
+    color: #000000
+    margin-top: 10px
+    margin-bottom: 10px
+  &-element_text_line
+    width: 100%
+    height: 2px
+    background-color: #000000
 
 .personal-area
   display: flex
@@ -176,102 +200,176 @@ body
 
 .our-cases
   background-color: #ffffff
-.our-cases_title
-  background-color: #ffffff
-  display: flex
-  align-items: center
-  justify-content: flex-start
-.text-our
-  color: #101515
-  padding: 20px
-  font-family: 'Cormorant Garamond', serif
-  font-size: 60px
-.text-cases
-  color: #101515
-  padding: 20px
-  font-family: 'Cormorant Garamond', serif
-  font-size: 60px
-.our-cases_cards
-  display: flex
-  justify-content: space-between
-  align-items: center
-  flex-wrap: wrap
-.our-cases_card
-  width: 350px
-  height: 280px
-  background-color: #101515
-  border-radius: 20px
-  margin: 10px
-.our-cases_card-1
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/1site.svg") 50% 50% no-repeat
-.our-cases_card-2
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/2site.svg") 50% 50% no-repeat
-.our-cases_card-3
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/3site.svg") 50% 50% no-repeat
-.our-cases_card-4
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/4site.svg") 50% 50% no-repeat
-.our-cases_card-5
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/5site.svg") 50% 50% no-repeat
-.our-cases_card-6
-  background-color: #C4C4C4
-.img-plus
-  margin: 0 auto
+  &_title
+    background-color: #ffffff
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    &_text-our
+      color: #101515
+      padding: 20px
+      font-family: 'Cormorant Garamond', serif
+      font-size: 60px
+    &_text-cases
+      color: #FFFFFF
+      padding: 20px
+      font-family: 'Cormorant Garamond', serif
+      font-size: 60px
+      z-index: 1
+  &_cards
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+  &_card
+    width: 350px
+    height: 280px
+    background-color: #101515
+    border-radius: 20px
+    margin: 10px
+    z-index: 1
+  &_card-1
+    background-size: cover
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/1site.svg") center
+  &_card-2
+    background-size: cover
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/2site.svg") center
+  &_card-3
+    background-size: cover
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/3site.svg") center
+  &_card-4
+    background-size: cover
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/4site.svg") center
+  &_card-5
+    background-size: cover
+    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/5site.svg") center
+  &_card-6
+    background-color: #C4C4C4
+  &_img-plus
+    margin: 0 auto
+  &-blackbox
+    position: absolute
+    top: 317vh
+    right: 0
+    background-color: #101515
+    width: 72%
+    height: 50vh
+    z-index: 0
 .reviews
   background-color: #101515
-.reviews_title
-  color: #ffffff
-  padding: 20px
-  font-family: 'Cormorant Garamond', serif
-  font-size: 60px
-.reviews_cards
+  &_title
+    color: #ffffff
+    padding: 20px
+    font-family: 'Cormorant Garamond', serif
+    font-size: 60px
+  &-slider
+    display: flex
+    justify-content: space-around
+    align-items: center
+    height: 100%
+    margin: auto
+  &_cards
+    margin: auto 0
+    height: 500px
+    max-width: 1100px
+  &_swiper-slide
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    align-items: center
+    background: linear-gradient(0.15turn, #000000, #101515, #000000)
+    border-radius: 30px
+    transition: 0.5s
+    height: 80%
+    max-width: 500px
+    &_title
+      font-family: 'Montserrat', sans-serif
+      font-size: 46px
+      height: 30%
+      margin: 0 auto
+      transition: 0.5s
+    &_text
+      font-family: 'Montserrat', sans-serif
+      font-size: 26px
+      height: 70%
+      margin: auto
+      transition: 0.5s
+      padding: 5px
+      width: 100%
+  &-swiper-button-next::after, .reviews-swiper-button-prev::after
+    display: none
+  .reviews-swiper-button-next,.reviews-swiper-button-prev
+    background-color: #101515
+    width: 40px
+    height: 70px
+    background-position: center
+    background-repeat: no-repeat
+    border: 0
+    position: static
+    border-radius: 30px
+.swiper-slide-prev, .swiper-slide-next
+  transform: scale(0.8)
+  border: 0
+  .reviews_swiper-slide_title
+    font-size: 26px
+  .reviews_swiper-slide_text
+    width: 100%
+    font-size: 16px
+    padding: 5px
+.swiper-slide-active
+  transform: scale(1)
+  border: 3px solid #c4c4c4
+
+.reviews-swiper-button-prev
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/prev.svg")
+.reviews-swiper-button-next
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/next.svg")
+
+
+
 .calc
-.calc_title
-  color: #ffffff
-  padding: 20px
-  padding-left: 0
-  font-family: 'Cormorant Garamond', serif
-  font-size: 60px
+  &_title
+    color: #ffffff
+    padding: 20px 20px 20px 0
+    font-family: 'Cormorant Garamond', serif
+    font-size: 60px
 .contacts
   background-color: #ffffff
-.contacts_title
-  color: #101515
-  padding: 20px
-  padding-left: 0
-  font-family: 'Cormorant Garamond', serif
-  font-size: 60px
-  width: 100%
-  margin-bottom: 30px
-.contacts_info
-  display: flex
-  justify-content: space-between
-.contacts_text
-  display: flex
-  justify-content: space-between
-  flex-direction: column
-  overflow: auto
-.contacts_address
-  font-family: 'Montserrat', sans-serif
-  font-size: 36px
-  color: #000000
-.contacts_numnmail
-.contacts_num
-  font-family: 'Montserrat', sans-serif
-  font-size: 36px
-  color: #000000
-.contacts_mail
-  font-family: 'Montserrat', sans-serif
-  font-size: 36px
-  color: #000000
-.contacts_map
-  width: 70%
-  height: 446px
-  border-radius: 20px
-  border-color: #000000
-  border: 2px
-.black-line
-  width: 100%
-  height: 2px
-  background-color: #000000
+  border-bottom: 2px solid #000000
+  padding-bottom: 40px
+  &_title
+    color: #101515
+    padding: 20px 20px 20px 0
+    font-family: 'Cormorant Garamond', serif
+    font-size: 60px
+    width: 100%
+    margin-bottom: 30px
+  &_info
+    display: flex
+    justify-content: space-between
+  &_text
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    overflow: auto
+  &_address
+    font-family: 'Montserrat', sans-serif
+    font-size: 36px
+    color: #000000
+  &_num
+    font-family: 'Montserrat', sans-serif
+    font-size: 36px
+    color: #000000
+  &_mail
+    font-family: 'Montserrat', sans-serif
+    font-size: 36px
+    color: #000000
+  &_map
+    width: 70%
+    height: 446px
+    border-radius: 20px
+    border: 2px #000000
+
 .footer
   padding: 20px
   display: flex
@@ -280,7 +378,7 @@ body
   color: #000000
   font-family: 'Montserrat', sans-serif
   font-size: 17px
-.icons
+//.icons
 .hren2
   color: #000000
   font-family: 'Montserrat', sans-serif
