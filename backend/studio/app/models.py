@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, UserManager
 from django.db.models.deletion import CASCADE
 from phonenumber_field.modelfields import PhoneNumberField
 # Create your models here.
@@ -49,7 +49,7 @@ class FormData(models.Model):
 
 class Ready(models.Model):
     percent = models.PositiveSmallIntegerField(verbose_name='Процент готовности')
-    mark = models.BooleanField(verbose_name='Галочка')
+    mark = models.BooleanField(verbose_name='Галочка', )
     report = models.FileField()
 
     class Meta:
@@ -62,10 +62,9 @@ class PersReady(models.Model):
     ready_id = models.OneToOneField(Ready, on_delete=CASCADE)
     
 
-class Person(models.Model):
-    user = models.OneToOneField(User,on_delete=models.CASCADE, related_name="persone", verbose_name='Пользователь')
-    date_joined = models.DateTimeField(auto_now_add=True, verbose_name='Дата регистрации')
+class Person(User):
     phone = PhoneNumberField()
+    objects = UserManager()
 
     class Meta:
         verbose_name = 'Пользователь'

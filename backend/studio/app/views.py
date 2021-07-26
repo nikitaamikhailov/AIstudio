@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 from .serializer import *
 from .models import Case, Review, Person
-from .license import IsOwnerProfileOrReadOnly
+from .permission import IsOwnerProfileOrReadOnly
 
 
 class ReviewListView(generics.ListAPIView):
@@ -25,18 +25,12 @@ class CaseListView(generics.ListAPIView):
     serializer_class = CaseSerializer
     
 
-
-class PersonListCreateView(generics.ListCreateAPIView):
+class PersonCreateView(generics.CreateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
-    # permission_classes=[IsAuthenticated]
-
-    def perform_create(self, serializer):
-        user=self.request.user
-        serializer.save(user=user)
 
 
-class PersonDetailView(generics.RetrieveUpdateDestroyAPIView):
+class PersonDetailView(generics.RetrieveUpdateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
     permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]

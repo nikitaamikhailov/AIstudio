@@ -8,7 +8,7 @@ urlpatterns = [
     path('review/', views.ReviewListView.as_view()),
     path('review/post/', views.ReviewCreateView.as_view()),
     #gets all user profiles and create a new profile
-    path("all-profiles/",views.PersonListCreateView.as_view(),name="all-profiles"),
-   # retrieves profile details of the currently logged in user
+    path("all-profiles/",views.PersonCreateView.as_view(),name="all-profiles"),
+    #retrieves profile details of the currently logged in user
     path("profile/<int:pk>",views.PersonDetailView.as_view(),name="profile"),
 ]
