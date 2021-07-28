@@ -33,4 +33,4 @@ class PersonCreateView(generics.CreateAPIView):
 class PersonDetailView(generics.RetrieveUpdateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
-    permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]
+    # permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]

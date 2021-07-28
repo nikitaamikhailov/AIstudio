@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'studio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aistudio',
+        'NAME': 'aistudio2',
         'USER' : 'user_name',
         'PASSWORD' : 'password',
         'HOST' : '127.0.0.1',
@@ -91,6 +91,10 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
+
+
+AUTH_USER_MODEL = 'app.Person'
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -174,7 +178,7 @@ DJOSER = {
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=15),
     'ROTATE_REFRESH_TOKENS': False,
     'BLACKLIST_AFTER_ROTATION': True,
 
@@ -195,5 +199,5 @@ SIMPLE_JWT = {
 
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
-    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=15),
 }
