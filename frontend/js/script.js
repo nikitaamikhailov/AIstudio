@@ -23,3 +23,8 @@ const swiperReviews = new Swiper('.reviews_cards', {
     centeredSlides: true,
 
 })
+
+let offerCard = document.querySelector('.offer-page_card');
+offerCard.onclick = function () {
+    offerCard.classList.add('page')
+};

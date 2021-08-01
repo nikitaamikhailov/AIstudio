@@ -24,6 +24,7 @@ body
 .header
   display: flex
   justify-content: space-between
+  height: 10vh
   &-rightside_contacts_text
     text-decoration: none
     transition: .5s
@@ -60,7 +61,7 @@ body
 
 
 .main
-  height: 100%
+  height: 91vh
   border-top: 3px solid #C4C4C4
   width: 100%
   display: flex
@@ -101,6 +102,8 @@ body
       font-size: 25px
       list-style: none
       margin-bottom: 20px
+      &:hover
+        text-decoration: underline
     &_slider
       width: 400px
       height: 150px
@@ -111,9 +114,11 @@ body
       &-pagination
 
   &-right
-    background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/dc36d88677f72ed3d7ba71f8d5a1e48d84dac9ac/frontend/imgs/bg-notebook.svg") 100% 100% no-repeat
+    background: url("https://github.com/nikitaamikhailov/AIstudio/blob/main/frontend/imgs/bg-notebook.png?raw=true") 100% 100% no-repeat
+    background-size: 100%
     width: 40%
-    height: 91%
+    height: 98%
+    padding-top: 3px
 
 
 .offer-page
@@ -143,8 +148,9 @@ body
     align-items: center
     margin: 0 auto
     align-self: center
-    &_card
-      padding: 0
+  &_card
+    padding: 0
+    cursor: pointer
 
 
 .title-how
@@ -154,6 +160,7 @@ body
   padding-bottom: 10px
 .how-work
   background-color: #ffffff
+  margin-bottom: 50px
 
 .list
   display: flex
@@ -204,6 +211,7 @@ body
 
 .our-cases
   background-color: #ffffff
+  margin-bottom: 50px
   &_title
     background-color: #ffffff
     display: flex
@@ -253,10 +261,10 @@ body
     margin: 0 auto
   &-blackbox
     position: absolute
-    top: 317vh
+    top: 275vh
     right: 0
     background-color: #101515
-    width: 72%
+    width: 66%
     height: 50vh
     z-index: 0
 .reviews
