@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <link rel="icon" href="imgs/logo.svg" type="image/icon type">
     <title>Студия Алексея Ильенко</title>
 
 </head>
@@ -49,13 +53,13 @@
                 </div>
                 <div class="main-left-navnslider">
                     <ul class="main-info_nav">
-                        <li class="main-info_point">Главная</li>
-                        <li class="main-info_point">Что мы можем<br>предложить</li>
-                        <li class="main-info_point">Как работаем</li>
-                        <li class="main-info_point">Наши кейсы</li>
-                        <li class="main-info_point">Отзывы</li>
-                        <li class="main-info_point">Калькулятор<br>сайтов</li>
-                        <li class="main-info_point">Контактная<br>информация</li>
+                        <li class="main-info_point point-1">Главная</li>
+                        <li class="main-info_point point-2">Что мы можем<br>предложить</li>
+                        <li class="main-info_point point-3">Как работаем</li>
+                        <li class="main-info_point point-4">Наши кейсы</li>
+                        <li class="main-info_point point-5">Отзывы</li>
+                        <li class="main-info_point point-6">Калькулятор<br>сайтов</li>
+                        <li class="main-info_point point-7">Контактная<br>информация</li>
                     </ul>
                     <div class="slider">
                         <div class="swiper-container main-info_slider">
@@ -198,9 +202,7 @@
                 <button class="our-cases_card our-cases_card-5"></button>
                 <button class="our-cases_card our-cases_card-6">
                     <img class="our-cases_img-plus"
-                         src="
-                         https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/
-                         b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/plussite.svg"
+                         src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/b9b78619d9ff49c024a596417a8b83dff23457fa/frontend/imgs/plussite.svg"
                          alt=""></button>
             </div>
         </div>
@@ -210,36 +212,40 @@
         <div class="container">
             <div class="reviews_title">Отзывы</div>
             <div class="reviews-slider">
-                <button class="swiper-button-prev reviews-swiper-button-prev"></button>
+                <button class="reviews-slider-button-prev"></button>
                 <div class="reviews_cards swiper-container">
-                    <div class="swiper-wrapper reviews_swiper-wrapper">
-                        <div class="swiper-slide reviews_swiper-slide">
-                            <div class="reviews_swiper-slide_title">Гугл</div>
-                            <div class="reviews_swiper-slide_text">
-                                Все заебись охуенные ребята ставлю класс</div>
+                    <div class="swiper-wrapper reviews_slider-wrapper">
+                        <div class="swiper-slide reviews_slider-slide">
+                            <div class="reviews_slider-slide_title">Гугл</div>
+                            <div class="reviews_slider-slide_text">
+                                Все заебись<br>охуенные ребята<br>ставлю класс</div>
                         </div>
-                        <div class="swiper-slide reviews_swiper-slide">
-                            <div class="reviews_swiper-slide_title">Леди гага</div>
-                            <div class="reviews_swiper-slide_text">
+                        <div class="swiper-slide reviews_slider-slide">
+                            <div class="reviews_slider-slide_title">Леди гага</div>
+                            <div class="reviews_slider-slide_text">
                                 Я кончила сайты охуенные</div>
                         </div>
-                        <div class="swiper-slide reviews_swiper-slide">
-                            <div class="reviews_swiper-slide_title">Газпром</div>
-                            <div class="reviews_swiper-slide_text">
-                                Все заебись охуенные ребята ставлю класс бла бла бла
-                                бал абл
-                                аалфарфращрфущршака
+                        <div class="swiper-slide reviews_slider-slide">
+                            <div class="reviews_slider-slide_title">Газпром</div>
+                            <div class="reviews_slider-slide_text">
+                                Все заебись<br>охуенные ребята<br>ставлю класс<br>бла бла бла
+                                <br>бал абл
+                                <br>аалфарфр
+                                <br>ащрфущршака
                             </div>
                         </div>
-                        <div class="swiper-slide reviews_swiper-slide">
-                            <div class="reviews_swiper-slide_title"></div>
-                            <div class="reviews_swiper-slide_text"></div>
+                        <div class="swiper-slide reviews_slider-slide">
+                            <div class="reviews_slider-slide_title"></div>
+                            <div class="reviews_slider-slide_text"></div>
                         </div>
+
                     </div>
-                    <div class="swiper-pagination reviews-swiper-pagination"></div>
                 </div>
-                <button class="swiper-button-next reviews-swiper-button-next"></button>
+                <button class="reviews-slider-button-next"></button>
+
+
             </div>
+            <div class="reviews-slider-pagination"></div>
         </div>
     </div>
 
@@ -249,13 +255,13 @@
         </div>
     </div>
 
-    <div class="contacts half-page">
+    <div class="contacts">
         <div class="container">
             <div class="contacts_title">Контактная<br>информация</div>
             <div class="contacts_info">
                 <div class="contacts_text">
                     <div class="contacts_address">
-                        Санкт-Петербург, Лахтинский пр., д. 2, корп. 3
+                        Санкт-Петербург,<br>Лахтинский пр., д. 2, корп. 3
                         197229
                     </div>
                     <div class="contacts_numnmail">
@@ -263,9 +269,7 @@
                         <div class="contacts_mail">information@mail.ru</div>
                     </div>
                 </div>
-                <iframe class="contacts_map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1500.9936151160937!2d30.300039305615012!3d59.856013294597076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963abed219478b%3A0xd9626057d54db495!2z0JrRgNCw0YHQvdC-0L_Rg9GC0LjQu9C-0LLRgdC60LDRjyDRg9C7LiwgNjIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTYyNDc!5e0!3m2!1sru!2sru!4v1626364352976!5m2!1sru!2sru"
-                        loading="lazy"></iframe>
+                <div id="blackMap"></div>
             </div>
         </div>
     </div>
@@ -294,6 +298,9 @@
     <div class="our-cases-blackbox"></div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
 <script src="js/script.js"></script>
 
 </body>

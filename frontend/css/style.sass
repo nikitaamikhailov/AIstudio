@@ -41,7 +41,7 @@ body
   display: flex
   align-items: center
 .logo_img
-  width: 110px
+  width: 90px
 .logo_text
   padding: 20px
   font-size: 32px
@@ -67,9 +67,9 @@ body
   display: flex
   flex-direction: row
   align-items: flex-start
-  justify-content: space-between
+  justify-content: flex-end
   &-left
-    width: 60%
+    max-width: 1000px
     display: flex
     flex-direction: column
     justify-content: space-around
@@ -102,15 +102,20 @@ body
       font-size: 25px
       list-style: none
       margin-bottom: 20px
+      cursor: pointer
       &:hover
         text-decoration: underline
     &_slider
       width: 400px
       height: 150px
-      background: radial-gradient(#c4c4c4, #000000)
+      background: linear-gradient(0.15turn, #000000, #101515, #000000)
       border-radius: 40px
       &_wrapper
       &_slide
+        display: flex
+        justify-content: center
+        align-items: center
+        padding-left: 5px
       &-pagination
 
   &-right
@@ -119,6 +124,8 @@ body
     width: 40%
     height: 98%
     padding-top: 3px
+.point-1:hover
+  text-decoration: none
 
 
 .offer-page
@@ -261,10 +268,10 @@ body
     margin: 0 auto
   &-blackbox
     position: absolute
-    top: 275vh
+    top: 297vh
     right: 0
     background-color: #101515
-    width: 66%
+    width: 72%
     height: 50vh
     z-index: 0
 .reviews
@@ -281,10 +288,9 @@ body
     height: 100%
     margin: auto
   &_cards
-    margin: auto 0
     height: 500px
     max-width: 1100px
-  &_swiper-slide
+  &_slider-slide
     display: flex
     flex-direction: column
     justify-content: space-around
@@ -306,37 +312,44 @@ body
       height: 70%
       margin: auto
       transition: 0.5s
-      padding: 5px
       width: 100%
-  &-swiper-button-next::after, .reviews-swiper-button-prev::after
-    display: none
-  .reviews-swiper-button-next,.reviews-swiper-button-prev
-    background-color: #101515
-    width: 40px
-    height: 70px
-    background-position: center
-    background-repeat: no-repeat
-    border: 0
-    position: static
-    border-radius: 30px
-.swiper-slide-prev, .swiper-slide-next
-  transform: scale(0.8)
+      text-align: center
+.swiper
+  &-slide
+    &-prev, &-next
+      transform: scale(0.7)
+      border: 0
+    &-active.reviews_slider-slide
+      transform: scale(0.9)
+      border: 5px solid #c4c4c4
+.swiper-button-next:after,
+.swiper-button-prev:after
+  display: none
+.reviews-slider-button-next,
+.reviews-slider-button-prev
+  position: static
+  background-color: #101515
+  width: 38px
+  height: 70px
+  background-position: center
+  background-repeat: no-repeat
   border: 0
-  .reviews_swiper-slide_title
-    font-size: 26px
-  .reviews_swiper-slide_text
-    width: 100%
-    font-size: 16px
-    padding: 5px
-.swiper-slide-active
-  transform: scale(1)
-  border: 3px solid #c4c4c4
-
-.reviews-swiper-button-prev
+.reviews-slider-button-prev
   background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/prev.svg")
-.reviews-swiper-button-next
-  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/023824574c5b8ff7a543d672a0b7078be66ffa08/frontend/imgs/next.svg")
-
+.reviews-slider-button-next
+  background: url("https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/d05d0e31a624c6b679c735fd5d7b7bb33ef7719c/frontend/imgs/next.svg")
+.reviews-slider-pagination
+  margin: 0 auto
+  text-align: center
+.swiper-pagination-bullet
+  background: #FFFFFF!important
+  width: 10px!important
+  height: 10px!important
+  margin: 0 10px!important
+  border-radius: 50%!important
+  &-active
+    width: 15px!important
+    height: 15px!important
 
 
 .calc
@@ -376,11 +389,6 @@ body
     font-family: 'Montserrat', sans-serif
     font-size: 36px
     color: #000000
-  &_map
-    width: 70%
-    height: 446px
-    border-radius: 20px
-    border: 2px #000000
 
 .footer
   padding: 20px
@@ -395,3 +403,7 @@ body
   color: #000000
   font-family: 'Montserrat', sans-serif
   font-size: 17px
+
+#blackMap
+  height: 450px
+  width: 50%

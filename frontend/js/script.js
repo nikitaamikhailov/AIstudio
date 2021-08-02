@@ -1,4 +1,4 @@
-const swiper1 = new Swiper('.main-info_slider', {
+const swiperMain = new Swiper('.main-info_slider', {
     loop: true,
     simulateTouch: true,
     spaceBetween: 100,
@@ -11,20 +11,29 @@ const swiper1 = new Swiper('.main-info_slider', {
 const swiperReviews = new Swiper('.reviews_cards', {
     loop: true,
     spaceBetween: 75,
-    pagination: {
-        el: '.reviews-swiper-pagination',
-        clickable: true
-    },
     slidesPerView: 3,
-    navigation: {
-        nextEl: '.reviews-swiper-button-next',
-        prevEl: '.reviews-swiper-button-prev',
-    },
     centeredSlides: true,
-
+    pagination: {
+        el: '.reviews-slider-pagination',
+        clickable: true,
+        type: 'bullets',
+    },
+    navigation: {
+        nextEl: '.reviews-slider-button-next',
+        prevEl: '.reviews-slider-button-prev',
+    },
 })
+const mymap = L.map('blackMap').setView([59.98714, 30.1706], 15);
+const attribution = 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+const apiUrl = 0
+const tiles = L.tileLayer(tileUrl, {attribution})
+tiles.addTo(mymap)
 
-let offerCard = document.querySelector('.offer-page_card');
-offerCard.onclick = function () {
-    offerCard.classList.add('page')
-};
+const office = L.marker([59.98714, 30.1706]).addTo(mymap);
+
+const offerPoint = document.querySelector('.point-1')
+const offerLink = document.querySelector('.offer-page')
+offerPoint.onclick = function () {
+    offerLink.scrollIntoView({block: "start", behavior: "smooth"});
+}
