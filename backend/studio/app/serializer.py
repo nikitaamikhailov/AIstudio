@@ -33,6 +33,17 @@ class FormSerializer(serializers.ModelSerializer):
         model = FormData
         fields = "__all__"
 
+    def create(self, validated_data):
+        data = FormData(
+            name=validated_data['mail'],
+            phone=validated_data['phone'],
+            mail=validated_data['mail'],
+            textData=validated_data['textData'],
+            file=validated_data['file']
+        )
+        data.save()
+        return data
+
 
 class PersonSerializer(serializers.ModelSerializer):
     class Meta:

@@ -9,9 +9,13 @@ from .manager import CustomUserManager
 import uuid
 
 
-def user_directory_path(instance, filename):
+def user_directory_path_form(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
-    return 'form/user_{0}/{1}'.format(instance.user.id, filename)
+    return 'users/{0}/form/{1}'.format(instance.mail, filename)
+
+def user_directory_path_ready(instance, filename):
+    # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
+    return 'users/{0}/ready/{1}'.format(instance.person, filename)
 
 
 def case_directory_path(instance, filename):
@@ -45,7 +49,7 @@ class FormData(models.Model):
     phone    = models.CharField(max_length=12, verbose_name='Номер телефона')
     mail     = models.CharField(max_length=50, verbose_name='Почта')
     textData = models.CharField(max_length=5000, null=True, verbose_name='Описание заявки')
-    file     = models.FileField(upload_to=user_directory_path, verbose_name='Прикреплленный файл')
+    file     = models.FileField(upload_to=user_directory_path_form, verbose_name='Прикреплленный файл')
 
     class Meta:
         verbose_name = 'Форма заявки'
@@ -83,9 +87,9 @@ class Person(AbstractBaseUser, PermissionsMixin):
 
 class Ready(models.Model):
     percent = models.PositiveSmallIntegerField(verbose_name='Процент готовности')
-    mark    = models.BooleanField(verbose_name='Галочка', )
-    report  = models.FileField()
+    mark    = models.BooleanField(verbose_name='Галочка полной готовности')
     person  = models.ForeignKey(Person, on_delete=models.PROTECT)
+    report  = models.FileField(upload_to=user_directory_path_ready, verbose_name='Документ готовности')
 
     class Meta:
         verbose_name = 'Готовность'
