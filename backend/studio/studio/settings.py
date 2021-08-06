@@ -3,12 +3,6 @@ from datetime import timedelta
 
 import os
 
-"""
-    Шпаргалка
-    pip freeze > requirements.txt
-
-
-"""
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -17,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vwc3u)y42!3)#01ct15xb72@(1mz8@ly*)mu0qoj1cpeufrd@*'
+SECRET_KEY = 'django-insecure-tbf*m(i3a&p(icrx-=v#&xirq(rn95r1eyz-6&&zm9ek##yhoa'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,7 +74,7 @@ WSGI_APPLICATION = 'studio.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aistudio2',
+        'NAME': 'aistudio',
         'USER' : 'user_name',
         'PASSWORD' : 'password',
         'HOST' : '127.0.0.1',
@@ -91,10 +85,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
-
-
-AUTH_USER_MODEL = 'app.Person'
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -140,6 +130,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+AUTH_USER_MODEL = 'app.Person'
+
+
 PHONENUMBER_DB_FORMAT = 'E164'
 PHONENUMBER_DEFAULT_REGION = 'RU'
 
@@ -147,7 +140,7 @@ PHONENUMBER_DEFAULT_REGION = 'RU'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
+    )   
 }
 
 

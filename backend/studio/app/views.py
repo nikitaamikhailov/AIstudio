@@ -23,9 +23,14 @@ class ReviewCreateView(generics.CreateAPIView):
 class CaseListView(generics.ListAPIView):
     queryset = Case.objects.all()
     serializer_class = CaseSerializer
+
+
+class FormCreateView(generics.CreateAPIView):
+    queryset=FormData.objects.all()
+    serializer_class=FormSerializer
     
 
-class PersonCreateView(generics.CreateAPIView):
+class PersonCreateView(generics.ListCreateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
 
@@ -33,4 +38,4 @@ class PersonCreateView(generics.CreateAPIView):
 class PersonDetailView(generics.RetrieveUpdateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
-    # permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]
+    permission_classes=[IsOwnerProfileOrReadOnly,IsAuthenticated]
