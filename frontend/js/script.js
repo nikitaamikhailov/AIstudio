@@ -4,7 +4,7 @@ const swiperMain = new Swiper('.main-info_slider', {
     spaceBetween: 100,
     pagination: {
         el: '.main-swiper-pagination',
-        clickable: true
+        clickable: true,
     },
 })
 
@@ -32,8 +32,15 @@ tiles.addTo(mymap)
 
 const office = L.marker([59.98714, 30.1706]).addTo(mymap);
 
-const offerPoint = document.querySelector('.point-1')
-const offerLink = document.querySelector('.offer-page')
-offerPoint.onclick = function () {
-    offerLink.scrollIntoView({block: "start", behavior: "smooth"});
+const anchors = document.querySelectorAll('a[href*="#"]')
+
+for (let anchor of anchors){
+    anchor.addEventListener("click", function (event) {
+        event.preventDefault()
+        const blockID = anchor.getAttribute('href')
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        })
+    })
 }

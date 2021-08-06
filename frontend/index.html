@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
-    <link rel="icon" href="imgs/logo.svg" type="image/icon type">
+    <link rel="icon" href="imgs/logo-icon.png" type="image/icon type">
     <title>Студия Алексея Ильенко</title>
 
 </head>
@@ -53,13 +53,20 @@
                 </div>
                 <div class="main-left-navnslider">
                     <ul class="main-info_nav">
-                        <li class="main-info_point point-1">Главная</li>
-                        <li class="main-info_point point-2">Что мы можем<br>предложить</li>
-                        <li class="main-info_point point-3">Как работаем</li>
-                        <li class="main-info_point point-4">Наши кейсы</li>
-                        <li class="main-info_point point-5">Отзывы</li>
-                        <li class="main-info_point point-6">Калькулятор<br>сайтов</li>
-                        <li class="main-info_point point-7">Контактная<br>информация</li>
+                        <li class="main-info_point point-1">
+                            <a href="" class="main-info_point">Главная</a></li>
+                        <li class="main-info_point point-2">
+                            <a href="#offer-page" class="main-info_point">Что мы можем<br>предложить</a></li>
+                        <li class="main-info_point point-3">
+                            <a href="#how-work" class="main-info_point">Как работаем</a></li>
+                        <li class="main-info_point point-4">
+                            <a href="#our-cases" class="main-info_point">Наши кейсы</a></li>
+                        <li class="main-info_point point-5">
+                            <a href="#reviews" class="main-info_point">Отзывы</a></li>
+                        <li class="main-info_point point-6">
+                            <a href="#calc" class="main-info_point">Калькулятор<br>сайтов</a></li>
+                        <li class="main-info_point point-7">
+                            <a href="#contacts" class="main-info_point">Контактная<br>информация</a></li>
                     </ul>
                     <div class="slider">
                         <div class="swiper-container main-info_slider">
@@ -91,7 +98,7 @@
         </main>
     </div>
 
-    <div class="offer-page">
+    <div class="offer-page" id="offer-page">
         <div class="container fill offer-page-flex">
             <div class="offer-page_title">Что мы можем<br>предложить</div>
             <div class="offer-page_cards">
@@ -100,7 +107,7 @@
                 <img class="offer-page_card3" src="imgs/штрихкод.svg" alt="карточка">
                 <img class="offer-page_card4" src="imgs/сайты%20агрегаторы.svg" alt="карточка">
             </div>
-            <div class="title-how">Как мы работаем</div>
+            <div class="title-how" id="how-work">Как мы работаем</div>
         </div>
     </div>
 
@@ -188,7 +195,7 @@
         </div>
     </div>
 
-    <div class="our-cases">
+    <div class="our-cases" id="our-cases">
         <div class="container">
             <div class="our-cases_title">
                 <div class="our-cases_title_text-our">Наши</div>
@@ -208,7 +215,7 @@
         </div>
     </div>
 
-    <div class="reviews bg-black">
+    <div class="reviews bg-black" id="reviews">
         <div class="container">
             <div class="reviews_title">Отзывы</div>
             <div class="reviews-slider">
@@ -235,8 +242,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide reviews_slider-slide">
-                            <div class="reviews_slider-slide_title"></div>
-                            <div class="reviews_slider-slide_text"></div>
+                            <div class="reviews_slider-slide_title">Никита</div>
+                            <div class="reviews_slider-slide_text">Андрей - лох хахаха</div>
                         </div>
 
                     </div>
@@ -249,13 +256,24 @@
         </div>
     </div>
 
-    <div class="calc page bg-black">
+    <div class="calc page bg-black" id="calc">
         <div class="container">
             <div class="calc_title">Калькулятор<br>сайтов</div>
+            <div class="calc_slide first-question">
+                <div class="first-question_num">
+                    01
+                </div>
+                <div class="first-question_title">
+                    Какие услуги вас интересуют?
+                </div>
+                <div class="first-question_cards">
+
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="contacts">
+    <div class="contacts" id="contacts">
         <div class="container">
             <div class="contacts_title">Контактная<br>информация</div>
             <div class="contacts_info">

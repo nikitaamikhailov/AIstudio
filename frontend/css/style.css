@@ -182,6 +182,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   list-style: none;
+  text-decoration: none;
   margin-bottom: 20px;
   cursor: pointer;
 }
@@ -577,7 +578,21 @@ body {
   font-family: "Cormorant Garamond", serif;
   font-size: 60px;
 }
+.calc_slide {
+  width: 90%;
+  margin: 0 auto;
+}
 
+.first-question_num {
+  font-size: 80px;
+  font-family: "Cormorant Garamond", serif;
+  color: #ffffff;
+}
+.first-question_title {
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+}
 .contacts {
   background-color: #ffffff;
   border-bottom: 2px solid #000000;
