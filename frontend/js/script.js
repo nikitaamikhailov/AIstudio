@@ -44,3 +44,18 @@ for (let anchor of anchors){
         })
     })
 }
+const personalAreaButtons = document.querySelectorAll('.personal-area-button')
+const hiddenElements = document.querySelectorAll('.can-be-hidden')
+const personalArea = document.querySelector('.personal-area-form')
+
+for (let personalAreaButton of personalAreaButtons){
+    personalAreaButton.addEventListener("click", function (event) {
+        event.preventDefault()
+        for (let block of hiddenElements){
+            block.classList.add('hidden')
+        }
+        personalArea.classList.remove('hidden')
+    })
+}
+
+

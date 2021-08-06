@@ -40,12 +40,28 @@
                                 class="header-rightside_contacts_text"
                                 href="mailto:information@mail.ru"
                         >information@mail.ru</a></div>
-                    <button class="personal-area-button">Личный кабинет</button>
+                    <button class="personal-area-button can-be-hidden">Личный кабинет</button>
                 </div>
             </header>
         </div>
-
-        <main class="main">
+        <div class="personal-area-form hidden">
+            <div class="personal-area-form_title">Личный кабинет</div>
+            <div class="personal-area-form_entry">
+                <div class="personal-area-form_entry_title">Вход</div>
+                <label>
+                    <input class="personal-area-form_entry_input login" type="text" placeholder="Логин">
+                </label>
+                <label>
+                    <input class="personal-area-form_entry_input password" type="text" placeholder="Пароль">
+                </label>
+                <div class="personal-area-form_entry_forgot-password">Забыли пароль?</div>
+                <div class="personal-area-form_buttons">
+                    <button class="personal-area-form_buttons_button">Регистрация</button>
+                    <button class="personal-area-form_buttons_button">Вход</button>
+                </div>
+            </div>
+        </div>
+        <main class="main can-be-hidden">
             <div class="main-left">
                 <div class="main-logo logo">
                     <img class="main-logo_img" src="imgs/logo.svg" alt="Логотип">
@@ -98,7 +114,7 @@
         </main>
     </div>
 
-    <div class="offer-page" id="offer-page">
+    <div class="offer-page can-be-hidden" id="offer-page">
         <div class="container fill offer-page-flex">
             <div class="offer-page_title">Что мы можем<br>предложить</div>
             <div class="offer-page_cards">
@@ -111,7 +127,7 @@
         </div>
     </div>
 
-    <div class="how-work">
+    <div class="how-work can-be-hidden">
         <div class="list-container">
             <div class="list">
                 <div class="list-element">
@@ -183,7 +199,7 @@
         </div>
     </div>
 
-    <div class="bg-black">
+    <div class="bg-black can-be-hidden">
         <div class="container">
             <div class="personal-area">
                 <div class="personal-area_text">
@@ -195,7 +211,7 @@
         </div>
     </div>
 
-    <div class="our-cases" id="our-cases">
+    <div class="our-cases can-be-hidden" id="our-cases">
         <div class="container">
             <div class="our-cases_title">
                 <div class="our-cases_title_text-our">Наши</div>
@@ -215,7 +231,7 @@
         </div>
     </div>
 
-    <div class="reviews bg-black" id="reviews">
+    <div class="reviews bg-black can-be-hidden" id="reviews">
         <div class="container">
             <div class="reviews_title">Отзывы</div>
             <div class="reviews-slider">
@@ -256,7 +272,7 @@
         </div>
     </div>
 
-    <div class="calc page bg-black" id="calc">
+    <div class="calc page bg-black can-be-hidden" id="calc">
         <div class="container">
             <div class="calc_title">Калькулятор<br>сайтов</div>
             <div class="calc_slide first-question">
@@ -267,13 +283,32 @@
                     Какие услуги вас интересуют?
                 </div>
                 <div class="first-question_cards">
-
+                    <div class="first-question_cards_card">
+                        <img class="first-question_cards_card-img" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/793e252f402811b3fce3c024dc06dc3f146f3abd/frontend/imgs/1card.svg" alt="">
+                        <div class="first-question_cards_card-text">Разработка<br>CRM</div>
+                    </div>
+                    <div class="first-question_cards_card">
+                        <img class="first-question_cards_card-img" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/793e252f402811b3fce3c024dc06dc3f146f3abd/frontend/imgs/2card.svg" alt="">
+                        <div class="first-question_cards_card-text">Мобильное<br>приложение</div>
+                    </div>
+                    <div class="first-question_cards_card">
+                        <img class="first-question_cards_card-img" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/793e252f402811b3fce3c024dc06dc3f146f3abd/frontend/imgs/3card.svg" alt="">
+                        <div class="first-question_cards_card-text">Интернет<br>магазин</div>
+                    </div>
+                    <div class="first-question_cards_card">
+                        <img class="first-question_cards_card-img" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/793e252f402811b3fce3c024dc06dc3f146f3abd/frontend/imgs/4card.svg" alt="">
+                        <div class="first-question_cards_card-text">Настройка<br>рекламы</div>
+                    </div>
+                    <div class="first-question_cards_card">
+                        <img class="first-question_cards_card-img" src="https://raw.githubusercontent.com/nikitaamikhailov/AIstudio/793e252f402811b3fce3c024dc06dc3f146f3abd/frontend/imgs/5card.svg" alt="">
+                        <div class="first-question_cards_card-text">Разработка<br>дизайна</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="contacts" id="contacts">
+    <div class="contacts can-be-hidden" id="contacts">
         <div class="container">
             <div class="contacts_title">Контактная<br>информация</div>
             <div class="contacts_info">
@@ -292,7 +327,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container can-be-hidden">
         <footer class="footer">
             <div class="hren1">ООО "Студия АИ"
                             <br>ОГРН 1234567890123
@@ -312,8 +347,8 @@
         </footer>
     </div>
 
-    <div class="offer-page-bottom-blackbox"></div>
-    <div class="our-cases-blackbox"></div>
+    <div class="offer-page-bottom-blackbox can-be-hidden"></div>
+    <div class="our-cases-blackbox can-be-hidden"></div>
 </div>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"

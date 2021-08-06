@@ -9,6 +9,8 @@
 .half-page
   width: 100%
   height: 50vh
+.hidden
+  display: none!important
 
 body
   min-height: 100vh
@@ -59,7 +61,58 @@ body
   &:hover
     background-position-x: 100px
 
-
+.personal-area-form
+  border-top: 3px solid #C4C4C4
+  height: 50vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-around
+  &_title
+    font-family: 'Cormorant Garamond', serif
+    font-size: 60px
+    padding: 20px
+  &_entry
+    width: 1000px
+    &_title
+      font-family: 'Montserrat', sans-serif
+      font-size: 25px
+      padding: 20px 20px 20px 0
+    &_input
+      width: 100%
+      height: 30px
+      margin: 20px 20px 20px 0
+      border-radius: 20px
+      border-color: #FFFFFF
+      background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c)
+      padding-left: 20px
+      font-family: 'Montserrat', sans-serif
+      font-size: 25px
+    &_forgot-password
+      font-family: 'Montserrat', sans-serif
+      font-size: 25px
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+  &_buttons
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 20px
+    &_button
+      width: 200px
+      height: 50px
+      background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c)
+      border-radius: 20px
+      text-align: center
+      align-items: center
+      font-family: 'Montserrat', sans-serif
+      font-size: 25px
+      border: 0
+      transition: 0.5s
+      &:hover
+        background-position-x: 100px
 .main
   height: 91vh
   border-top: 3px solid #C4C4C4
@@ -111,13 +164,11 @@ body
       height: 150px
       background: linear-gradient(0.15turn, #000000, #101515, #000000)
       border-radius: 40px
-      &_wrapper
       &_slide
         display: flex
         justify-content: center
         align-items: center
         padding-left: 5px
-      &-pagination
 
   &-right
     background: url("https://github.com/nikitaamikhailov/AIstudio/blob/main/frontend/imgs/bg-notebook.png?raw=true") 100% 100% no-repeat
@@ -356,11 +407,11 @@ body
 .calc
   &_title
     color: #ffffff
-    padding: 20px 20px 20px 0
+    padding: 20px 20px 0 0
     font-family: 'Cormorant Garamond', serif
     font-size: 60px
   &_slide
-    width: 90%
+    width: 70%
     margin: 0 auto
 .first-question
 
@@ -373,6 +424,27 @@ body
     font-family: 'Cormorant Garamond', serif
     font-size: 40px
   &_cards
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    &_card
+      width: 200px
+      height: 200px
+      border-radius: 10%
+      background: linear-gradient(0.15turn, #000000, #101515, #000000)
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      align-items: center
+      margin: 20px 40px
+      &-img
+        width: 80px
+        height: 80px
+      &-text
+        font-family: 'Montserrat', sans-serif
+        font-size: 26px
+        text-align: center
 
 
 
