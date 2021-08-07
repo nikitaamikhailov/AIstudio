@@ -75,6 +75,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .logo_img {
@@ -91,10 +92,10 @@ body {
   padding: 15px;
   background: -webkit-gradient(linear, left top, right top, from(#3c3c3c), color-stop(#000000), to(#3c3c3c));
   background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c);
+  border: 2px solid #000000;
   border-radius: 28px;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  border: none;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -177,7 +178,7 @@ body {
           align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
-  border: 0;
+  border: 2px solid #000000;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -278,8 +279,9 @@ body {
 .main-info_slider {
   width: 400px;
   height: 150px;
-  background: linear-gradient(0.15turn, #000000, #101515, #000000);
+  background: linear-gradient(-0.15turn, #000000, #3c3c3c, #000000);
   border-radius: 40px;
+  border: 2px solid #000000;
 }
 .main-info_slider_slide {
   display: -webkit-box;
@@ -503,8 +505,10 @@ body {
   height: 280px;
   background-color: #101515;
   border-radius: 20px;
+  border: 0;
   margin: 10px;
   z-index: 1;
+  cursor: pointer;
 }
 .our-cases_card-1 {
   background-size: cover;
@@ -692,10 +696,12 @@ body {
       flex-wrap: wrap;
 }
 .first-question_cards_card {
-  width: 200px;
-  height: 200px;
+  width: 196px;
+  height: 196px;
   border-radius: 10%;
-  background: linear-gradient(0.15turn, #000000, #101515, #000000);
+  background: -webkit-gradient(linear, left top, right top, from(#3c3c3c), color-stop(#000000), to(#3c3c3c));
+  background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c);
+  border: 2px solid #000000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -709,6 +715,10 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 40px;
+}
+.first-question_cards_card:active {
+  border: 0;
+  margin: 22px 42px;
 }
 .first-question_cards_card-img {
   width: 80px;
