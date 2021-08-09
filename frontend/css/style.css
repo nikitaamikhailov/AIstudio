@@ -146,6 +146,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
 }
+.personal-area-form_entry_input:focus {
+  outline: none;
+}
 .personal-area-form_entry_forgot-password {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
