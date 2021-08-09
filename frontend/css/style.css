@@ -730,6 +730,63 @@ body {
   text-align: center;
 }
 
+.second-question_num {
+  font-size: 80px;
+  font-family: "Cormorant Garamond", serif;
+  color: #ffffff;
+}
+.second-question_title {
+  color: #ffffff;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 40px;
+}
+.second-question_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.second-question_cards_card {
+  width: 40%;
+  height: 196px;
+  border-radius: 10%;
+  background: -webkit-gradient(linear, left top, right top, from(#3c3c3c), color-stop(#000000), to(#3c3c3c));
+  background: linear-gradient(to right, #3c3c3c, #000000, #3c3c3c);
+  border: 2px solid #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 40px;
+}
+.second-question_cards_card:active {
+  border: 0;
+  margin: 22px 42px;
+}
+.second-question_cards_card-img {
+  width: 80px;
+  height: 80px;
+}
+.second-question_cards_card-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
+
 .contacts {
   background-color: #ffffff;
   border-bottom: 2px solid #000000;
