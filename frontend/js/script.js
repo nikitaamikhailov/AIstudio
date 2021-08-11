@@ -47,6 +47,8 @@ for (let anchor of anchors){
 const personalAreaButtons = document.querySelectorAll('.personal-area-button')
 const hiddenElements = document.querySelectorAll('.can-be-hidden')
 const personalArea = document.querySelector('.personal-area-form')
+const registrationButton = document.querySelector('#registration')
+const registration = document.querySelector('.registration-form')
 const logo = document.querySelector('.logo')
 const firstAnswer = document.querySelectorAll('.first-question_cards_card')
 const firstQuestion = document.querySelector('.first-question')
@@ -62,12 +64,19 @@ for (let personalAreaButton of personalAreaButtons){
         personalArea.classList.remove('hidden')
     })
 }
+registrationButton.addEventListener("click", function (event) {
+    event.preventDefault()
+    personalArea.classList.add('hidden')
+    registration.classList.remove('hidden')
+})
+
 logo.addEventListener("click", function (event) {
     event.preventDefault()
     for (let block of hiddenElements){
         block.classList.remove('hidden')
     }
     personalArea.classList.add('hidden')
+    registration.classList.add('hidden')
 })
 
 for (let answer of firstAnswer){
