@@ -33,7 +33,7 @@ class FormCreateView(generics.CreateAPIView):
 class PersonCreateView(generics.ListCreateAPIView):
     queryset=Person.objects.all()
     serializer_class=PersonSerializer
-
+    permission_classes=[IsAuthenticated]
 
 class PersonDetailView(generics.RetrieveUpdateAPIView):
     queryset=Person.objects.all()

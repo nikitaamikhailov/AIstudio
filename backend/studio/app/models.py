@@ -28,7 +28,7 @@ class Case(models.Model):
     name = models.CharField(max_length=20, verbose_name='Название')
 
     class Meta:
-        verbose_name = 'Кейс'
+        verbose_name        = 'Кейс'
         verbose_name_plural = 'Кейсы'
 
     def __str__(self):
@@ -41,8 +41,13 @@ class Review(models.Model):
     date       = models.DateTimeField(auto_now=True, verbose_name='Дата отзыва')
 
     class Meta:
-        verbose_name = 'Отзыв'
+        verbose_name        = 'Отзыв'
         verbose_name_plural = 'Отзывы'
+        ordering            = ["date"]
+    
+    def str(self):
+        return self.personName
+
 
 class FormData(models.Model):
     name     = models.CharField(max_length=30, verbose_name='Имя клиента')
@@ -50,10 +55,12 @@ class FormData(models.Model):
     mail     = models.CharField(max_length=50, verbose_name='Почта')
     textData = models.CharField(max_length=5000, null=True, verbose_name='Описание заявки')
     file     = models.FileField(upload_to=user_directory_path_form, verbose_name='Прикреплленный файл')
+    date     = models.DateTimeField(auto_now=True, verbose_name='Дата заявки')
 
     class Meta:
-        verbose_name = 'Форма заявки'
+        verbose_name        = 'Форма заявки'
         verbose_name_plural = 'Формы заявок'
+        ordering            = ['date']
     
 
 class Person(AbstractBaseUser, PermissionsMixin):
@@ -62,11 +69,10 @@ class Person(AbstractBaseUser, PermissionsMixin):
     is_authenticated = True
     is_active        = True
     
-    username = None
-    # id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    username    = None
     is_staff    = models.BooleanField(default=False, verbose_name='Статус персонала')
     is_active   = models.BooleanField(default=True, verbose_name='Активный пользователь')
-    date_joined = models.DateTimeField(default=timezone.now)
+    date_joined = models.DateTimeField(default=timezone.now, verbose_name='Дата регистрации')
     phone       = PhoneNumberField(unique=True)
     password    = models.CharField(max_length=100, blank=True, verbose_name="Пароль")
     first_name  = models.CharField(max_length=100, blank=True, verbose_name="Имя")
@@ -75,11 +81,12 @@ class Person(AbstractBaseUser, PermissionsMixin):
 
     USERNAME_FIELD = "email"
 
-    objects        = CustomUserManager()
+    objects = CustomUserManager()
 
     class Meta:
-        verbose_name = "Пользователи"
+        verbose_name        = "Пользователи"
         verbose_name_plural = "Пользователи"
+        ordering            = ['date_joined']
 
     def str(self):
         return self.email
@@ -87,10 +94,15 @@ class Person(AbstractBaseUser, PermissionsMixin):
 
 class Ready(models.Model):
     percent = models.PositiveSmallIntegerField(verbose_name='Процент готовности')
-    mark    = models.BooleanField(verbose_name='Галочка полной готовности')
+    mark01  = models.BooleanField(verbose_name='Галочка готовности сбора информации')
+    mark02  = models.BooleanField(verbose_name='Галочка готовности дизайна')
+    mark03  = models.BooleanField(verbose_name='Галочка готовности разработки')
+    mark04  = models.BooleanField(verbose_name='Галочка готовности тестирования')
+    mark05  = models.BooleanField(verbose_name='Галочка готовности наполнения контентом')
+    mark06  = models.BooleanField(verbose_name='Галочка готовности финального запуска')
     person  = models.ForeignKey(Person, on_delete=models.PROTECT)
     report  = models.FileField(upload_to=user_directory_path_ready, verbose_name='Документ готовности')
 
     class Meta:
-        verbose_name = 'Готовность'
+        verbose_name        = 'Готовность'
         verbose_name_plural = 'Готовность'
